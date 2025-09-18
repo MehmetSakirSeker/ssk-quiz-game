@@ -32,7 +32,7 @@ body {
 
 .container {
     max-width: 70vw; /* 900px yerine */
-    min-height: 950px; /* container başlangıçta yeterince büyük */
+    min-height: 920px; /* container başlangıçta yeterince büyük */
     margin: 0.8vw 0 0.84vw 0.84vw; /* üst: 0.84vw, sağ: 0, alt: 0.84vw, sol: 0 */
     padding: 0.8vw; 
     background: var(--surface);
@@ -103,7 +103,7 @@ button:active {
     right: 0.84vw; /* 20px yerine */
     top: 0.8vw;
     width: 28vw; /* 300px yerine */
-    max-height: 60vh; /* 600px yerine */
+    max-height: 58vh; /* 600px yerine */
     overflow-y: auto;
     background: var(--surface);
     border-radius: var(--radius);
@@ -213,8 +213,8 @@ button:active {
 }
 
 #qr-code img {
-    width: 20vw;  /* orantılı */
-    height: 20vw;
+    width: 25vw;  /* orantılı */
+    height: 25vw;
 }
 
 #qr-code p {
