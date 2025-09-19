@@ -31,8 +31,8 @@ body {
 }
 
 .container {
-    max-width: 70vw; /* 900px yerine */
-    min-height: 920px; /* container başlangıçta yeterince büyük */
+    max-width: 65vw; /* 900px yerine */
+    min-height: 910px; /* container başlangıçta yeterince büyük */
     margin: 0.8vw 0 0.84vw 0.84vw; /* üst: 0.84vw, sağ: 0, alt: 0.84vw, sol: 0 */
     padding: 0.8vw; 
     background: var(--surface);
@@ -102,7 +102,7 @@ button:active {
     position: fixed;
     right: 0.84vw; /* 20px yerine */
     top: 0.8vw;
-    width: 28vw; /* 300px yerine */
+    width: 33vw; /* 300px yerine */
     max-height: 58vh; /* 600px yerine */
     overflow-y: auto;
     background: var(--surface);
@@ -200,28 +200,6 @@ button:active {
     border: none;
 }
 
-#qr-code {
-    position: fixed;
-    bottom: 14px;  /* ekranın altından boşluk */
-    right: 14px;   /* ekranın sağından boşluk */
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
-
-#qr-code img {
-    width: 25vw;  /* orantılı */
-    height: 25vw;
-}
-
-#qr-code p {
-    font-size: 12px;
-    margin: 0;
-    color: #333;
-}
 
 
 #progress-bar {
@@ -338,12 +316,12 @@ button:active {
 }
 
 #question-text {
-    font-size: 36px; /* İstediğin boyutu buraya yazabilirsin */
+    font-size: 24px; /* İstediğin boyutu buraya yazabilirsin */
     font-weight: 600; /* Daha belirgin yapmak için */
     margin-bottom: 20px; /* Alt boşluk */
 }
 .option {
-    font-size: 22px; /* Şıklar daha büyük */
+    font-size: 18px; /* Şıklar daha büyük */
     padding: 20px 24px; /* Daha büyük tıklama alanı */
     margin: 12px 0;
 }
@@ -356,9 +334,46 @@ h1 {
   text-align: center;               /* Fallback */
 }
 
+/* Sol tarafta QR kodları yan yana yerleştir */
+#qr-container {
+    position: fixed;
+    bottom: 14px;
+    left: 14px;
+    display: flex;
+    flex-direction: row; /* yatay dizim için row */
+    gap: 14px; /* QR kodlar arası boşluk */
+    z-index: 1000;
+}
 
+.qr-code {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
+.qr-code img {
+    width: 18vw; /* daha büyük */
+    height: 18vw;
+}
 
+.qr-code p {
+    font-size: 12px;
+    margin: 0;
+    color: #333;
+}
 
+/* Sağ tarafta logo */
+#logo-container {
+    position: fixed;
+    bottom: 4px;
+    right: 1px;
+    text-align: center;
+    z-index: 1000;
+}
 
-
+#logo-container img {
+    width: 40vw;
+    height: auto; /* orantılı */
+}

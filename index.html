@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sosyal Sorumluluk Kulübü Farkındalık Oyunu</h1>
+        <h1>Farkındalık Quizi</h1>
 
         <!-- Başlangıç Ekranı -->
         <div id="start-screen">
@@ -19,40 +19,49 @@
         <!-- Soru Ekranı -->
         <div id="question-screen" class="hidden">
             <div id="progress-container">
-  <div id="progress-bar">
-    <div id="progress"></div>
-  </div>
-  <span id="progress-text">0/0</span>
-</div>
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <span id="progress-text">0/0</span>
+            </div>
             <div id="question-container">
                 <p id="question-text"></p>
                 <div id="options"></div>
             </div>
-        
         </div>
 
         <!-- İstatistikler -->
         <div id="stats-screen" class="hidden">
             <h2>İstatistikler</h2>
             <p id="score-display"></p>
-            
             <button id="next-player">Sonraki Oyuncu</button>
         </div>
-
-        
     </div>
+
     <!-- Leaderboard -->
-        <div id="leaderboard">
-            <h2>Leaderboard</h2>
-            <div id="leaderboard-list"></div>
+    <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-list"></div>
+    </div>
+
+    <!-- Sol alt köşe: QR Kodları 
+    <div id="qr-container">
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://club.ieu.edu.tr/ogrenci-kulupleri" alt="QR Code 1">
+            <p>Bize Katıl! / Join Us!</p>
         </div>
-        <div id="qr-code">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://club.ieu.edu.tr/ogrenci-kulupleri" alt="QR Code">
-    <p>Bize Katıl! / Join Us!</p>
-</div>
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://chat.whatsapp.com/GHCy3F5colr7ggeklgND7c" alt="QR Code 2">
+            <p>Whatsapp Grup!</p>
+      </div>
+    </div>-->
+
+    <!-- Sağ alt köşe: Logo -->
+    <div id="logo-container">
+        <img src="logo.png" alt="Kulüp Logo">
+    </div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </body>
 </html>
