@@ -30,7 +30,7 @@ const allQuestions = [
         options: ["Eğitimde fırsat eşitliği", "Teknolojik gelişim", "Bilgiye erişim", "Toplumsal dayanışma"],
         answer: "Eğitimde fırsat eşitliği",
         properAnswer: "Ücretsiz internet erişimi sağlamak doğrudan eğitimde fırsat eşitliğini destekler.",
-        level: "zor",
+        level: "çok zor",
         topic: "Eğitim"
     },
     {
@@ -38,7 +38,7 @@ const allQuestions = [
         options: ["İstihdam politikaları", "Eşitlik", "Toplumsal entegrasyon", "Adalet"],
         answer: "Eşitlik",
         properAnswer: "Engelli bireylerin iş hayatına katılımı esasen fırsat eşitliğini vurgular.",
-        level: "zor",
+        level: "çok zor",
         topic: "Eşitlik"
     },
     {
@@ -46,7 +46,7 @@ const allQuestions = [
         options: ["Kültürel gelişim", "Toplumsal sorumluluk", "Aktif vatandaşlık", "Dayanışma"],
         answer: "Aktif vatandaşlık",
         properAnswer: "Gönüllülük bilincini geliştirmek aktif vatandaşlık anlayışını güçlendirir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Gençlik"
     },
     {
@@ -62,7 +62,7 @@ const allQuestions = [
         options: ["Çevre bilinci", "Sürdürülebilir tüketim", "Atık yönetimi", "Doğa koruma"],
         answer: "Sürdürülebilir tüketim",
         properAnswer: "Bez çanta dağıtmak özellikle sürdürülebilir tüketim davranışını teşvik eder.",
-        level: "zor",
+        level: "çok zor",
         topic: "Çevre"
     },
     {
@@ -70,7 +70,7 @@ const allQuestions = [
         options: ["Kültürel uyum", "Eğitim hakkı", "Toplumsal entegrasyon", "İnsan hakları"],
         answer: "Eğitim hakkı",
         properAnswer: "Dil eğitimi doğrudan eğitim hakkının sağlanmasına yönelik bir çalışmadır.",
-        level: "zor",
+        level: "çok zor",
         topic: "Haklar"
     },
 
@@ -79,7 +79,7 @@ const allQuestions = [
         options: ["Yaşam boyu öğrenme", "Teknolojik gelişim", "Toplumsal kapsayıcılık", "Eğitim"],
         answer: "Yaşam boyu öğrenme",
         properAnswer: "Yaşlılar için teknoloji atölyeleri yaşam boyu öğrenmeyi destekler.",
-        level: "zor",
+        level: "çok zor",
         topic: "Eğitim"
     },
     {
@@ -87,7 +87,7 @@ const allQuestions = [
         options: ["Sanatın erişilebilirliği", "Engelli hakları", "Kültürel eşitlik", "Toplumsal entegrasyon"],
         answer: "Sanatın erişilebilirliği",
         properAnswer: "Tiyatroyu işaret diliyle sunmak sanatın erişilebilirliğini artırmaya yöneliktir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Genel"
     },
     {
@@ -111,7 +111,7 @@ const allQuestions = [
         options: ["İnsan hakları", "Çocuk hakları", "Çalışma hakları", "Adalet"],
         answer: "Çocuk hakları",
         properAnswer: "Çocuk işçiliğini önlemek esasen çocuk haklarını korumaya yöneliktir.",
-        level: "zor",
+        level: " çok zor",
         topic: "Haklar"
     },
     {
@@ -127,7 +127,7 @@ const allQuestions = [
         options: ["Psikolojik destek", "Eğitimde güvenlik", "Toplumsal farkındalık", "Sağlıklı iletişim"],
         answer: "Eğitimde güvenlik",
         properAnswer: "Akran zorbalığını önlemek eğitim ortamının güvenliğini sağlamaya yöneliktir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Eğitim"
     },
     {
@@ -135,7 +135,7 @@ const allQuestions = [
         options: ["Spor yoluyla farkındalık", "Çevre eğitimi", "Gençlik gelişimi", "Doğa ile uyum"],
         answer: "Çevre eğitimi",
         properAnswer: "Doğa sporları üzerinden çevre bilinci kazandırmak çevre eğitimi kapsamındadır.",
-        level: "zor",
+        level: "çok zor",
         topic: "Çevre"
     },
     {
@@ -151,7 +151,7 @@ const allQuestions = [
         options: ["Teknolojiye erişim", "Eğitimde eşitlik", "Dijital okuryazarlık", "Gençlik gelişimi"],
         answer: "Dijital okuryazarlık",
         properAnswer: "Kodlama eğitimi özellikle dijital okuryazarlığı artırmaya yöneliktir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Eğitim"
     },
 
@@ -207,7 +207,7 @@ const allQuestions = [
         ],
         answer: "Toplumun tüm bireylerine, potansiyellerini tam olarak gerçekleştirme fırsatı sunulması.",
         properAnswer: "Toplumsal cinsiyet eşitliği projeleri, sadece belirli alanlarda eşitliği sağlamakla kalmaz, tüm bireylerin cinsiyetlerinden bağımsız olarak en yüksek potansiyellerine ulaşabilecekleri bir ortam yaratır.",
-        level: "zor",
+        level: "çok zor",
         topic: "Haklar"
     },
     {
@@ -220,7 +220,7 @@ const allQuestions = [
         ],
         answer: "Fosil yakıtlara olan bağımlılığı azaltarak küresel sıcaklık artışını ve iklim krizini yavaşlatmak.",
         properAnswer: "Yeşil ekonomi projeleri, ekonomik faaliyetleri çevresel etkilerden ayırarak, doğrudan küresel ısınmaya ve iklim değişikliğine yol açan ana nedenlere çözüm bulmayı hedefler.",
-        level: "zor",
+        level: "çok zor",
         topic: "Çevre"
     },
     {
@@ -246,7 +246,7 @@ const allQuestions = [
         ],
         answer: "Evrensel İnsan Hakları ve Temel Yaşam Hakları.",
         properAnswer: "Çocuk işçiliği, çocukların eğitim, sağlık ve güvenlik gibi en temel insan haklarını ihlal eden bir sorundur. Bu nedenle, mücadele projeleri doğrudan evrensel insan hakları temasına odaklanır.",
-        level: "zor",
+        level: "çok zor",
         topic: "Haklar"
     },
     // burdan
@@ -273,7 +273,7 @@ const allQuestions = [
         ],
         answer: "Bireyler arasında karşılıksız yardım ve dayanışma kültürünü.",
         properAnswer: "Kan bağışı kampanyaları, bireylerin birbirine herhangi bir karşılık beklemeden yardım etme eylemini teşvik ederek, toplumun temelindeki dayanışma ve yardımlaşma duygusunu güçlendirir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Sağlık"
     },
     {
@@ -286,7 +286,7 @@ const allQuestions = [
         ],
         answer: "Atık yönetimi ve döngüsel ekonomiye geçiş.",
         properAnswer: "Çevre temalı projeler arasında en yaygın ve somut olanlar atık yönetimi ve geri dönüşüm faaliyetleridir. Bu projeler, toplumu daha verimli ve döngüsel bir ekonomiye geçiş konusunda bilinçlendirir.",
-        level: "zor",
+        level: "çok zor",
         topic: "Çevre"
     },
     {
