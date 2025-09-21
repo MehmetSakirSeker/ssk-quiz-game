@@ -24,377 +24,316 @@ let leaderboard = JSON.parse(localStorage.getItem('leaderboard') || '[]');
 
 
 const allQuestions = [
-    // Kolay (1-10)
+    //zor
     {
-        q: "Bir sosyal sorumluluk projesinde yaşlılara yardım etmek hangi temaya girer?",
-        options: ["Teknoloji", "Eğitim", "Dayanışma", "Moda"],
-        answer: "Dayanışma",
-        properAnswer: "Yaşlılara yardım etmek dayanışma temalı sosyal sorumluluk projelerine örnektir.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Plastik poşet yerine bez çanta kullanmak hangi sosyal sorumluluk örneğidir?",
-        options: ["Çevre duyarlılığı", "Sağlık hizmeti", "Spor etkinliği", "Reklam çalışması"],
-        answer: "Çevre duyarlılığı",
-        properAnswer: "Bez çanta kullanmak çevre duyarlılığı temalı bir sosyal sorumluluk örneğidir.",
-        level: "kolay",
-        topic: "Çevre"
-    },
-    {
-        q: "Bir okulun köydeki çocuklara kitap bağışlaması hangi temaya girer?",
-        options: ["Eğitim", "Moda", "Ticaret", "Eğlence"],
-        answer: "Eğitim",
-        properAnswer: "Kitap bağışı, eğitim temalı sosyal sorumluluk projesidir.",
-        level: "kolay",
+        q: "Bir sosyal sorumluluk projesinde öğrenciler için ücretsiz internet erişimi sağlamak en çok hangi tema ile örtüşür?",
+        options: ["Eğitimde fırsat eşitliği", "Teknolojik gelişim", "Bilgiye erişim", "Toplumsal dayanışma"],
+        answer: "Eğitimde fırsat eşitliği",
+        properAnswer: "Ücretsiz internet erişimi sağlamak doğrudan eğitimde fırsat eşitliğini destekler.",
+        level: "zor",
         topic: "Eğitim"
     },
     {
-        q: "Sosyal sorumluluk projelerinin gönüllüler için sağladığı en büyük kazanç nedir?",
-        options: ["Maddi gelir", "Yeni dostluklar ve deneyim", "Rekabet üstünlüğü", "Popülerlik"],
-        answer: "Yeni dostluklar ve deneyim",
-        properAnswer: "Gönüllüler, sosyal sorumluluk projelerinde yeni dostluklar kurar ve deneyim kazanır.",
-        level: "kolay",
-        topic: "Genel"
+        q: "Bir projede engelli bireylerin iş hayatına katılımını artırmak için yapılan çalışmalar hangi temaya en uygun düşer?",
+        options: ["İstihdam politikaları", "Eşitlik", "Toplumsal entegrasyon", "Adalet"],
+        answer: "Eşitlik",
+        properAnswer: "Engelli bireylerin iş hayatına katılımı esasen fırsat eşitliğini vurgular.",
+        level: "zor",
+        topic: "Eşitlik"
     },
     {
-        q: "Sokak hayvanlarına mama bırakmak hangi sosyal sorumluluk alanına girer?",
-        options: ["Hayvan hakları", "Moda", "Reklam", "Eğlence"],
-        answer: "Hayvan hakları",
-        properAnswer: "Sokak hayvanlarına mama bırakmak hayvan hakları alanına girer.",
-        level: "kolay",
+        q: "Bir sosyal sorumluluk projesinde gençlere gönüllülük bilinci kazandırmak hangi tema ile daha çok ilişkilidir?",
+        options: ["Kültürel gelişim", "Toplumsal sorumluluk", "Aktif vatandaşlık", "Dayanışma"],
+        answer: "Aktif vatandaşlık",
+        properAnswer: "Gönüllülük bilincini geliştirmek aktif vatandaşlık anlayışını güçlendirir.",
+        level: "zor",
+        topic: "Gençlik"
+    },
+    {
+        q: "Bir projede kadınların kendi işlerini kurmaları için mikro kredi desteği sağlamak hangi tema ile en güçlü şekilde bağlantılıdır?",
+        options: ["Ekonomik kalkınma", "Toplumsal cinsiyet eşitliği", "Finansal okuryazarlık", "Dayanışma"],
+        answer: "Toplumsal cinsiyet eşitliği",
+        properAnswer: "Kadınlara mikro kredi desteği toplumsal cinsiyet eşitliğini güçlendiren projelere örnektir.",
+        level: "zor",
         topic: "Haklar"
     },
     {
-        q: "Öğrencilerin okulda çevre temizliği yapması hangi sosyal sorumluluk faaliyetidir?",
-        options: ["Çöp toplama etkinliği", "Spor turnuvası", "Tiyatro oyunu", "Reklam filmi"],
-        answer: "Çöp toplama etkinliği",
-        properAnswer: "Çevre temizliği yapmak çöp toplama etkinliği kapsamında bir sosyal sorumluluk faaliyetidir.",
-        level: "kolay",
+        q: "Bir sosyal sorumluluk projesinde plastik kullanımını azaltmak için bez çanta dağıtılması hangi temaya daha doğrudan girer?",
+        options: ["Çevre bilinci", "Sürdürülebilir tüketim", "Atık yönetimi", "Doğa koruma"],
+        answer: "Sürdürülebilir tüketim",
+        properAnswer: "Bez çanta dağıtmak özellikle sürdürülebilir tüketim davranışını teşvik eder.",
+        level: "zor",
         topic: "Çevre"
     },
     {
-        q: "Sosyal sorumluluk projeleri neden toplum için önemlidir?",
-        options: ["Kâr sağlar", "Toplumsal farkındalık oluşturur", "Sadece eğlence sunar", "Moda yaratır"],
-        answer: "Toplumsal farkındalık oluşturur",
-        properAnswer: "Sosyal sorumluluk projeleri toplumda farkındalık yaratır.",
-        level: "kolay",
+        q: "Bir projede mülteci çocuklara dil eğitimi verilmesi hangi tema ile en uygun şekilde bağdaştırılır?",
+        options: ["Kültürel uyum", "Eğitim hakkı", "Toplumsal entegrasyon", "İnsan hakları"],
+        answer: "Eğitim hakkı",
+        properAnswer: "Dil eğitimi doğrudan eğitim hakkının sağlanmasına yönelik bir çalışmadır.",
+        level: "zor",
+        topic: "Haklar"
+    },
+
+     {
+        q: "Bir sosyal sorumluluk projesinde yaşlı bireyler için teknoloji kullanım atölyeleri düzenlemek hangi tema ile daha çok örtüşür?",
+        options: ["Yaşam boyu öğrenme", "Teknolojik gelişim", "Toplumsal kapsayıcılık", "Eğitim"],
+        answer: "Yaşam boyu öğrenme",
+        properAnswer: "Yaşlılar için teknoloji atölyeleri yaşam boyu öğrenmeyi destekler.",
+        level: "zor",
+        topic: "Eğitim"
+    },
+    {
+        q: "Bir projede işitme engelliler için tiyatro oyunlarının işaret diliyle sahnelenmesi hangi tema ile doğrudan ilgilidir?",
+        options: ["Sanatın erişilebilirliği", "Engelli hakları", "Kültürel eşitlik", "Toplumsal entegrasyon"],
+        answer: "Sanatın erişilebilirliği",
+        properAnswer: "Tiyatroyu işaret diliyle sunmak sanatın erişilebilirliğini artırmaya yöneliktir.",
+        level: "zor",
         topic: "Genel"
     },
     {
-        q: "Çocuklara ücretsiz aşı kampanyası düzenlemek hangi temaya girer?",
-        options: ["Sağlık", "Moda", "Spor", "Teknoloji"],
-        answer: "Sağlık",
-        properAnswer: "Ücretsiz aşı kampanyası sağlık temalı bir sosyal sorumluluk projesidir.",
-        level: "kolay",
+        q: "Bir sosyal sorumluluk projesinde kırsal bölgelerde kız çocuklarının okula devamlılığını sağlamak hangi tema ile en güçlü şekilde ilişkilidir?",
+        options: ["Çocuk hakları", "Toplumsal cinsiyet eşitliği", "Eğitim hakkı", "Dayanışma"],
+        answer: "Toplumsal cinsiyet eşitliği",
+        properAnswer: "Kız çocuklarının eğitime katılımını artırmak toplumsal cinsiyet eşitliğini destekler.",
+        level: "zor",
+        topic: "Eğitim"
+    },
+    {
+        q: "Bir sosyal sorumluluk projesinde okullarda sağlıklı beslenme bilinci oluşturmak hangi temayla en doğru şekilde bağdaştırılır?",
+        options: ["Sağlık eğitimi", "Beslenme hakkı", "Yaşam kalitesi", "Toplumsal farkındalık"],
+        answer: "Sağlık eğitimi",
+        properAnswer: "Okullarda beslenme bilinci oluşturmak sağlık eğitiminin bir parçasıdır.",
+        level: "zor",
         topic: "Sağlık"
     },
     {
-        q: "Bir köy okuluna kırtasiye yardımında bulunmak hangi proje örneğidir?",
-        options: ["Eğitim desteği", "Spor faaliyeti", "Reklam çalışması", "Moda akımı"],
-        answer: "Eğitim desteği",
-        properAnswer: "Kırtasiye yardımı eğitim desteği sağlayan bir sosyal sorumluluk projesidir.",
-        level: "kolay",
-        topic: "Eğitim"
-    },
-    {
-        q: "Gönüllülük esasına dayalı projelerde temel amaç nedir?",
-        options: ["Topluma katkı sağlamak", "Yalnızca para kazanmak", "Rekabet etmek", "Eğlence sunmak"],
-        answer: "Topluma katkı sağlamak",
-        properAnswer: "Gönüllülük esaslı projelerin temel amacı topluma katkı sağlamaktır.",
-        level: "kolay",
-        topic: "Genel"
-    },
-
-    // Orta (11-20)
-    {
-        q: "Çocuk işçiliğini önlemeye yönelik projeler hangi hakka vurgu yapar?",
-        options: ["Çalışma hakkı", "Eğitim hakkı", "Mülkiyet hakkı", "Seyahat hakkı"],
-        answer: "Eğitim hakkı",
-        properAnswer: "Çocuk işçiliğini önlemeye yönelik projeler eğitim hakkına vurgu yapar.",
-        level: "orta",
+        q: "Bir sosyal sorumluluk projesinde çocuk işçiliğini önlemeye yönelik faaliyetler hangi tema ile en doğrudan ilgilidir?",
+        options: ["İnsan hakları", "Çocuk hakları", "Çalışma hakları", "Adalet"],
+        answer: "Çocuk hakları",
+        properAnswer: "Çocuk işçiliğini önlemek esasen çocuk haklarını korumaya yöneliktir.",
+        level: "zor",
         topic: "Haklar"
     },
     {
-        q: "Bir sosyal sorumluluk projesinde “şeffaflık” neden önemlidir?",
-        options: ["Rekabeti artırır", "Toplumun güvenini kazanır", "Eğlence sağlar", "Harcamaları gizler"],
-        answer: "Toplumun güvenini kazanır",
-        properAnswer: "Şeffaflık, sosyal sorumluluk projelerinde toplumun güvenini sağlar.",
-        level: "orta",
-        topic: "Genel"
-    },
-    {
-        q: "Üniversite öğrencilerinin köy okullarına gidip ders vermesi hangi temaya girer?",
-        options: ["Eğitimde fırsat eşitliği", "Spor desteği", "Moda akımı", "Reklam kampanyası"],
-        answer: "Eğitimde fırsat eşitliği",
-        properAnswer: "Köy okullarına gidip ders vermek eğitimde fırsat eşitliği temalı bir projedir.",
-        level: "orta",
-        topic: "Eğitim"
-    },
-    {
-        q: "Çevreye zarar veren fabrikalara karşı yapılan farkındalık kampanyası ne tür bir sosyal sorumluluk örneğidir?",
-        options: ["Çevresel hak savunuculuğu", "Rekabeti artırma", "Eğlence organizasyonu", "Moda projesi"],
-        answer: "Çevresel hak savunuculuğu",
-        properAnswer: "Fabrikalara karşı yapılan kampanya çevresel hak savunuculuğu örneğidir.",
-        level: "orta",
+        q: "Bir projede şehir merkezlerinde bisiklet yolları yapılması hangi tema ile en doğrudan ilişkilidir?",
+        options: ["Sağlıklı yaşam", "Çevre dostu ulaşım", "Kent planlaması", "Sürdürülebilirlik"],
+        answer: "Çevre dostu ulaşım",
+        properAnswer: "Bisiklet yolları çevre dostu ulaşımı teşvik etmeye yöneliktir.",
+        level: "zor",
         topic: "Çevre"
     },
     {
-        q: "Sosyal sorumluluk projelerinde “iş birliği”nin temel yararı nedir?",
-        options: ["Projenin daha etkili olması", "Rekabeti artırması", "Popülerlik sağlaması", "Bireysel kazanç getirmesi"],
-        answer: "Projenin daha etkili olması",
-        properAnswer: "İş birliği projelerin daha etkili ve geniş kapsamlı olmasını sağlar.",
-        level: "orta",
-        topic: "Genel"
+        q: "Bir sosyal sorumluluk projesinde okullarda akran zorbalığını önlemek için eğitim verilmesi hangi tema ile en uygun şekilde bağdaştırılır?",
+        options: ["Psikolojik destek", "Eğitimde güvenlik", "Toplumsal farkındalık", "Sağlıklı iletişim"],
+        answer: "Eğitimde güvenlik",
+        properAnswer: "Akran zorbalığını önlemek eğitim ortamının güvenliğini sağlamaya yöneliktir.",
+        level: "zor",
+        topic: "Eğitim"
     },
     {
-        q: "Kadınların meslek edinmesini sağlayan projeler hangi temayı güçlendirir?",
-        options: ["Toplumsal cinsiyet eşitliği", "Spor faaliyetleri", "Çevre duyarlılığı", "Rekabet ortamı"],
-        answer: "Toplumsal cinsiyet eşitliği",
-        properAnswer: "Kadınların meslek edinmesini sağlayan projeler toplumsal cinsiyet eşitliğini güçlendirir.",
-        level: "orta",
-        topic: "Haklar"
+        q: "Bir projede doğa sporları ile gençlere çevre bilinci kazandırmak hangi tema ile en güçlü şekilde ilgilidir?",
+        options: ["Spor yoluyla farkındalık", "Çevre eğitimi", "Gençlik gelişimi", "Doğa ile uyum"],
+        answer: "Çevre eğitimi",
+        properAnswer: "Doğa sporları üzerinden çevre bilinci kazandırmak çevre eğitimi kapsamındadır.",
+        level: "zor",
+        topic: "Çevre"
     },
     {
-        q: "“Toplum yararına çalışma programları” en çok hangi gruba fayda sağlar?",
-        options: ["İşsiz bireylere", "Moda takipçilerine", "Sporculara", "Reklam şirketlerine"],
-        answer: "İşsiz bireylere",
-        properAnswer: "Toplum yararına çalışma programları işsiz bireylere fayda sağlar.",
-        level: "orta",
-        topic: "Genel"
+        q: "Bir sosyal sorumluluk projesinde kırsalda sağlık taraması yapmak hangi tema ile doğrudan bağdaştırılır?",
+        options: ["Sağlık hakkı", "Toplumsal dayanışma", "Temel ihtiyaçlar", "Yaşam kalitesi"],
+        answer: "Sağlık hakkı",
+        properAnswer: "Kırsalda sağlık taraması yapmak doğrudan sağlık hakkını gözetir.",
+        level: "zor",
+        topic: "Sağlık"
     },
     {
-        q: "Sosyal sorumluluk projelerinde en sık karşılaşılan sorunlardan biri nedir?",
-        options: ["Kaynak eksikliği", "Aşırı destek", "Gereksiz reklam", "Fazla gönüllü"],
-        answer: "Kaynak eksikliği",
-        properAnswer: "Projelerde en sık karşılaşılan sorun kaynak eksikliğidir.",
-        level: "orta",
-        topic: "Genel"
-    },
-    {
-        q: "Hayvan haklarını savunan projelerde en önemli amaç nedir?",
-        options: ["Hayvanların yaşam koşullarını iyileştirmek", "Reklam yapmak", "Eğlence sağlamak", "Ticaret yapmak"],
-        answer: "Hayvanların yaşam koşullarını iyileştirmek",
-        properAnswer: "Hayvan haklarını savunan projelerde amaç hayvanların yaşam koşullarını iyileştirmektir.",
-        level: "orta",
-        topic: "Haklar"
-    },
-    {
-        q: "Sosyal sorumluluk projeleri gençlere hangi beceriyi kazandırır?",
-        options: ["Liderlik ve iletişim", "Rekabet duygusu", "Moda bilgisi", "Maddi kazanç"],
-        answer: "Liderlik ve iletişim",
-        properAnswer: "Projeler gençlere liderlik ve iletişim becerisi kazandırır.",
-        level: "orta",
-        topic: "Genel"
+        q: "Bir projede dezavantajlı gençlere kodlama eğitimi verilmesi hangi temaya en uygun düşer?",
+        options: ["Teknolojiye erişim", "Eğitimde eşitlik", "Dijital okuryazarlık", "Gençlik gelişimi"],
+        answer: "Dijital okuryazarlık",
+        properAnswer: "Kodlama eğitimi özellikle dijital okuryazarlığı artırmaya yöneliktir.",
+        level: "zor",
+        topic: "Eğitim"
     },
 
     // Zor (21-30)
+    
     {
-        q: "Sosyal sorumluluk projelerinde “etki ölçümü” neden yapılır?",
-        options: ["Projenin topluma sağladığı faydayı görmek", "Reklam gelirlerini artırmak", "Popülerliği ölçmek", "Katılımcı sayısını saymak"],
-        answer: "Projenin topluma sağladığı faydayı görmek",
-        properAnswer: "Etki ölçümü, projenin topluma sağladığı faydayı görmeyi sağlar.",
-        level: "zor",
+        q: "Bir perakende şirketinin yöneticisisiniz. Tedarik zincirinizde, bir ürünü daha düşük maliyetle üretebilecek, ancak üretim sürecinde daha fazla karbon salımı yapan bir yöntem buldunuz. Bu maliyet farkı, ürünü düşük gelirli aileler için çok daha erişilebilir hale getirecek. Ne yaparsınız?",
+        options: ["Daha ucuz ve çevreci olmayan yöntemi kullanır, ancak bu değişikliği ürünün fiyatına yansıtmayarak tüketiciye doğrudan bir fayda sağlamazsınız.", "Daha pahalı ve çevreci yöntemi korur, ancak ürünün fiyatını artırmadan maliyetleri başka alanlardan kısmaya çalışırsınız.", "Çevreci üretim yöntemine devam eder ve hükümetten, çevre dostu üretim yapan firmalara yönelik vergi teşvikleri talep etme girişiminde bulunursunuz.", "Daha ucuz, ancak daha az çevreci yöntemi seçer ve elde edilen kârın bir kısmını çevresel iyileştirme projelerine bağışlarsınız."],
+        answer: "Çevreci üretim yöntemine devam eder ve hükümetten, çevre dostu üretim yapan firmalara yönelik vergi teşvikleri talep etme girişiminde bulunursunuz.",
+        properAnswer: "Bu seçenek, hem çevresel hem de sosyal sorumlulukları dengeler ve hem gezegene hem de tüketicilere karşı etik bir duruş sağlar.",
+        level: "çok zor",
         topic: "Genel"
     },
     {
-        q: "Sosyal girişimcilik ile sosyal sorumluluk arasındaki fark nedir?",
-        options: ["Sosyal girişimcilik sürdürülebilir iş modeliyle topluma fayda sağlar, sosyal sorumluluk daha çok gönüllü katkıdır", "Sosyal girişimcilik eğlence amaçlıdır, sosyal sorumluluk iş odaklıdır", "İkisi de tamamen aynıdır", "Sosyal girişimcilik sadece moda sektöründe görülür"],
-        answer: "Sosyal girişimcilik sürdürülebilir iş modeliyle topluma fayda sağlar, sosyal sorumluluk daha çok gönüllü katkıdır",
-        properAnswer: "Sosyal girişimcilik sürdürülebilir iş modeliyle topluma fayda sağlar; sosyal sorumluluk ise gönüllü katkıdır.",
-        level: "zor",
+        q: "Bir sivil toplum kuruluşunun yöneticisisiniz. Kuruluşunuz, faaliyetlerini büyük ölçüde genişletecek kadar büyük bir bağış teklifi alıyor. Ancak bağışçı, tartışmalı bir kamu figürü ve geçmişte etik olmayan iş uygulamalarıyla tanınıyor. Bağışı kabul etmezseniz yüzlerce kişi yardımdan mahrum kalacak. Ne yaparsınız?",
+        options: ["Bağışı kabul eder, ancak bu paranın sadece belirli bir proje için kullanılacağını açıklar ve bağışçının adını gizlersiniz.", "Bağışı reddeder, ancak bağışçıya, itibarını düzeltecek bir sosyal sorumluluk projesine yatırım yapmasını önererek dolaylı yoldan yardım sağlamasını istersiniz.", "Bağışı reddeder, ancak durumu kamuoyuna açıklayarak ve diğer potansiyel bağışçılara bu etik duruşunuzu anlatarak yeni fon kaynakları yaratmaya çalışırsınız.", "Bağışı kabul eder, ancak bağışçıyla kamuya açık bir anlaşma yaparak bağışın şeffaf ve denetlenebilir bir şekilde kullanılmasını garanti altına alırsınız."],
+        answer: "Bağışı kabul eder, ancak bağışçıyla kamuya açık bir anlaşma yaparak bağışın şeffaf ve denetlenebilir bir şekilde kullanılmasını garanti altına alırsınız.",
+        properAnswer: "Bağışı kabul edip şeffaf ve denetlenebilir bir şekilde kullanmak, hem etik duruşu korur hem de insanlara yardımın ulaşmasını sağlar.",
+        level: "çok zor",
         topic: "Genel"
     },
     {
-        q: "“Kurumsal sosyal sorumluluk raporları”nın temel işlevi nedir?",
-        options: ["Şirketin toplumsal etkilerini şeffaf biçimde paylaşmak", "Reklam yapmak", "Sadece kâr göstermek", "Moda trendlerini tanıtmak"],
-        answer: "Şirketin toplumsal etkilerini şeffaf biçimde paylaşmak",
-        properAnswer: "Kurumsal sosyal sorumluluk raporları şirketin toplumsal etkilerini şeffaf biçimde paylaşmasını sağlar.",
-        level: "zor",
+        q: "Sınırlı bir yardım bütçeniz var. Bu bütçeyi ya bir barınaktaki hayvanlara acil gıda ve tıbbi yardım sağlamak için ya da gelişmekte olan bir ülkedeki çocukların temel eğitim masraflarını karşılamak için kullanabilirsiniz. İki projeden sadece birini tam olarak destekleyebilirsiniz. Ne yaparsınız?",
+        options: ["Bütçenin tamamını hayvan barınağına ayırırsınız, çünkü acil ve somut bir yardım sağlayarak anında acıyı dindirebilirsiniz.", "Bütçenin tamamını çocukların eğitimine ayırırsınız, çünkü bu, insan potansiyeline yapılan uzun vadeli bir yatırımdır.", "Bütçenizi ikiye böler, her iki projeye de eşit destek sağlarsınız.", "Her iki projenin de potansiyel etkisini artırmak için bütçenizi, çocuk eğitimini hayvan refahıyla birleştiren, örneğin çocuklara hayvan bakımı eğitimi veren bir projeye yönlendirirsiniz."],
+        answer: "Her iki projenin de potansiyel etkisini artırmak için bütçenizi, çocuk eğitimini hayvan refahıyla birleştiren, örneğin çocuklara hayvan bakımı eğitimi veren bir projeye yönlendirirsiniz.",
+        properAnswer: "Uzun vadeli etkisi en yüksek olan yatırım insan potansiyeline yapılan yatırımdır, bu nedenle çocukların eğitimi önceliklidir.",
+        level: "çok zor",
         topic: "Genel"
     },
     {
-        q: "Çocuk haklarıyla ilgili sosyal sorumluluk projeleri hangi uluslararası belgeye dayanır?",
-        options: ["Birleşmiş Milletler Çocuk Hakları Sözleşmesi", "Magna Carta", "Lozan Antlaşması", "Sevr Antlaşması"],
-        answer: "Birleşmiş Milletler Çocuk Hakları Sözleşmesi",
-        properAnswer: "Çocuk haklarıyla ilgili projeler BM Çocuk Hakları Sözleşmesine dayanır.",
-        level: "zor",
-        topic: "Haklar"
+        q: "Bir teknoloji firmasında çalışıyorsunuz. Şirket, kullanıcı verilerini (anonimleştirilmiş) analiz ederek toplumsal sorunları çözmeyi amaçlayan bir yapay zeka aracı geliştiriyor. Bu araç, doğru kullanılırsa önemli faydalar sağlayacak ancak verilerin tamamen anonim kalması garanti edilemiyor. Ne yaparsınız?",
+        options: ["Verilerin, herhangi bir potansiyel risk yaratmaması için, sadece toplu ve istatistiksel raporlar şeklinde kullanılmasına izin verirsiniz.", "Projeyi, veri anonimleştirme risklerini şeffaf bir şekilde açıklayan bir kamu bilgilendirme kampanyasıyla başlatırsınız ve kullanıcıların onayıyla ilerlersiniz.", "Verilerin anonimliğini korumak için, toplumsal sorunları çözecek algoritmanın sadece kısıtlı bir veri setinde çalışmasına izin verirsiniz.", "Projenin etik kurul tarafından incelenmesini ve verilerin, yetkisiz erişimi tamamen imkansız hale getiren şifreleme ve denetim mekanizmalarıyla korunmasını talep edersiniz."],
+        answer: "Projenin etik kurul tarafından incelenmesini ve verilerin, yetkisiz erişimi tamamen imkansız hale getiren şifreleme ve denetim mekanizmalarıyla korunmasını talep edersiniz.",
+        properAnswer: "Veri kullanımını şeffaf ve kullanıcı onayıyla yapmak, hem etik hem de yasal sorumlulukları yerine getirir.",
+        level: "çok zor",
+        topic: "Genel"
     },
     {
-        q: "Birleşmiş Milletler’in belirlediği 17 “Sürdürülebilir Kalkınma Hedefi”nin amacı nedir?",
-        options: ["Yoksulluğu azaltmak ve gezegeni korumak", "Moda akımlarını yaymak", "Şirketlerin kârını artırmak", "Rekabeti teşvik etmek"],
-        answer: "Yoksulluğu azaltmak ve gezegeni korumak",
-        properAnswer: "BM'nin 17 sürdürülebilir kalkınma hedefinin amacı yoksulluğu azaltmak ve gezegeni korumaktır.",
-        level: "zor",
+        q: "Bir şehrin su işleri müdürü olarak, sınırlı bir bütçeyle ya zengin bir mahalledeki eskiyen ancak hala çalışan su borularını tamir edecek ya da yoksul bir mahalledeki patlayan boruları değiştireceksiniz. Yoksul mahalledeki sorun şu an acil, ancak zengin mahallenin boruları yakın gelecekte büyük bir kriz yaratabilir. Ne yaparsınız?",
+        options: ["Yoksul mahalledeki sorunu geçici olarak tamir eder ve zengin mahalle sakinlerinden, boru yenileme projesine katkıda bulunmalarını talep edersiniz.", "Bütçenin tamamını, acil ve mevcut sorunu çözmek için yoksul mahallenin borularına ayırırsınız, çünkü en çok ihtiyacı olanlar önceliklendirilmelidir.", "Bütçeyi ikiye bölerek her iki mahalleye de eşit oranda yardım edersiniz.", "Bütçenin tamamını, yakın gelecekte büyük bir arızayı önlemek için zengin mahallenin borularına ayırırsınız, çünkü bu, en yüksek sayıda insanı etkileyecek potansiyel bir krizi önler."],
+        answer: "Bütçenin tamamını, acil ve mevcut sorunu çözmek için yoksul mahallenin borularına ayırırsınız, çünkü en çok ihtiyacı olanlar önceliklendirilmelidir.",
+        properAnswer: "Acil ve mevcut sorunu çözmek, sınırlı kaynakların en ihtiyaç duyanlara ulaşmasını sağlar ve önceliklendirme ilkesine uygundur.",
+        level: "çok zor",
         topic: "Genel"
     },
     {
         q: "“Toplumsal cinsiyet eşitliği” temalı projelerin uzun vadeli toplumsal katkısı nedir?",
-        options: ["Kadın ve erkeklerin eşit fırsatlara sahip olması", "Yalnızca kadınların ön plana çıkması", "Rekabetin artması", "Moda sektörünün gelişmesi"],
-        answer: "Kadın ve erkeklerin eşit fırsatlara sahip olması",
-        properAnswer: "Toplumsal cinsiyet eşitliği projeleri, kadın ve erkeklerin eşit fırsatlara sahip olmasını sağlar.",
+        options: [
+            "Kadınların ve erkeklerin iş hayatında eşit temsil edilmesi.",
+            "Toplumun tüm bireylerine, potansiyellerini tam olarak gerçekleştirme fırsatı sunulması.",
+            "Eğitim ve sağlık hizmetlerine erişimde cinsiyetler arası tüm eşitsizliklerin ortadan kalkması.",
+            "Toplumsal karar alma mekanizmalarında kadın liderlerin sayısının artırılması."
+        ],
+        answer: "Toplumun tüm bireylerine, potansiyellerini tam olarak gerçekleştirme fırsatı sunulması.",
+        properAnswer: "Toplumsal cinsiyet eşitliği projeleri, sadece belirli alanlarda eşitliği sağlamakla kalmaz, tüm bireylerin cinsiyetlerinden bağımsız olarak en yüksek potansiyellerine ulaşabilecekleri bir ortam yaratır.",
         level: "zor",
         topic: "Haklar"
     },
     {
         q: "“Yeşil ekonomi”yi destekleyen sosyal sorumluluk projeleri en çok hangi küresel soruna çözüm arar?",
-        options: ["İklim değişikliği", "Rekabet eksikliği", "Moda yetersizliği", "Sağlık turizmi"],
-        answer: "İklim değişikliği",
-        properAnswer: "Yeşil ekonomi projeleri iklim değişikliği sorununa çözüm arar.",
+        options: [
+            "Biyoçeşitliliğin kaybını ve ekolojik sistemlerin bozulmasını önlemek.",
+            "Kalkınmakta olan ülkelerdeki ekonomik büyüme ve sanayileşmeyi teşvik etmek.",
+            "Sınırlı doğal kaynakların sürdürülebilir bir şekilde yönetilmesi ve tüketim alışkanlıklarının değiştirilmesi.",
+            "Fosil yakıtlara olan bağımlılığı azaltarak küresel sıcaklık artışını ve iklim krizini yavaşlatmak."
+        ],
+        answer: "Fosil yakıtlara olan bağımlılığı azaltarak küresel sıcaklık artışını ve iklim krizini yavaşlatmak.",
+        properAnswer: "Yeşil ekonomi projeleri, ekonomik faaliyetleri çevresel etkilerden ayırarak, doğrudan küresel ısınmaya ve iklim değişikliğine yol açan ana nedenlere çözüm bulmayı hedefler.",
         level: "zor",
         topic: "Çevre"
     },
     {
         q: "Bir sosyal sorumluluk projesinin başarısında “yerel halkın katılımı” neden önemlidir?",
-        options: ["Projenin daha kalıcı olmasını sağlar", "Rekabeti artırır", "Harcamaları gizler", "Eğlence sunar"],
-        answer: "Projenin daha kalıcı olmasını sağlar",
-        properAnswer: "Yerel halkın katılımı, projenin daha kalıcı olmasını sağlar.",
+        options: [
+            "Projenin hedeflerinin yerel ihtiyaçlara uygunluğunu sağlamak ve aidiyet duygusu oluşturmak.",
+            "Projenin sürdürülebilirliğini ve yerel topluluk tarafından sahiplenilmesini garanti altına almak.",
+            "Projenin finansal kaynaklarını çeşitlendirmek ve gönüllü işgücü sağlamak.",
+            "Proje hakkında yerel medyada daha fazla görünürlük kazanmak ve toplumsal algıyı güçlendirmek."
+        ],
+        answer: "Projenin sürdürülebilirliğini ve yerel topluluk tarafından sahiplenilmesini garanti altına almak.",
+        properAnswer: "Yerel halkın projeye dahil olması, onu pasif bir alıcı olmaktan çıkarır ve aktif bir katılımcı haline getirir. Bu sahiplenme duygusu, projenin bitiminden sonra da devam etmesini ve etkilerinin kalıcı olmasını sağlar.",
         level: "zor",
         topic: "Genel"
     },
     {
-        q: "Sosyal sorumluluk projelerinin en temel amacı nedir?",
-        options: ["Reklam yapmak", "Topluma fayda sağlamak", "Sadece eğlence düzenlemek", "Kar elde etmek"],
-        answer: "Topluma fayda sağlamak",
-        properAnswer: "Topluma fayda sağlamak, sosyal sorumluluk projelerinin en temel amacıdır.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Aşağıdakilerden hangisi bir sosyal sorumluluk projesi örneğidir?",
-        options: ["İhtiyaç sahiplerine gıda yardımı yapmak", "Arkadaşlarla piknik düzenlemek", "Spor salonuna üye olmak", "Alışveriş yapmak"],
-        answer: "İhtiyaç sahiplerine gıda yardımı yapmak",
-        properAnswer: "İhtiyaç sahiplerine gıda yardımı yapmak, sosyal sorumluluk projesine örnektir.",
-        level: "kolay",
-        topic: "Haklar"
-    },
-    {
-        q: "Çevre için yapılan en yaygın sosyal sorumluluk projesi nedir?",
-        options: ["Ağaç dikme kampanyaları", "Alışveriş merkezine gitmek", "Tatil yapmak", "Spor turnuvası düzenlemek"],
-        answer: "Ağaç dikme kampanyaları",
-        properAnswer: "Ağaç dikme kampanyaları, çevre odaklı sosyal sorumluluk projelerinin en yaygın örneğidir.",
-        level: "kolay",
-        topic: "Çevre"
-    },
-    {
-        q: "Sosyal sorumluluk projesi yaparken en önemli ilke nedir?",
-        options: ["Sadece gönüllülere fayda sağlamak", "Toplumun ihtiyacına uygun olmak", "Kâr amaçlı çalışmak", "Popüler görünmek"],
-        answer: "Toplumun ihtiyacına uygun olmak",
-        properAnswer: "Sosyal sorumluluk projeleri, toplumun ihtiyacına uygun olmalıdır.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Sağlık temalı bir sosyal sorumluluk projesine örnek hangisidir?",
-        options: ["Kan bağışı kampanyası", "Futbol turnuvası düzenlemek", "Alışveriş festivali", "Konser bileti satışı"],
-        answer: "Kan bağışı kampanyası",
-        properAnswer: "Kan bağışı kampanyası, sağlık temalı sosyal sorumluluk projelerine örnektir.",
-        level: "kolay",
-        topic: "Sağlık"
-    },
-    {
-        q: "Sosyal sorumluluk projelerinde gönüllü olmak bireye ne kazandırır?",
-        options: ["Sadece zaman kaybı", "Toplumsal duyarlılık ve deneyim", "Yalnızca para", "Hiçbir şey"],
-        answer: "Toplumsal duyarlılık ve deneyim",
-        properAnswer: "Gönüllü olmak, bireye toplumsal duyarlılık ve deneyim kazandırır.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Hayvanlarla ilgili bir sosyal sorumluluk projesi aşağıdakilerden hangisidir?",
-        options: ["Sokak hayvanlarına barınak yapmak", "Sirk düzenlemek", "Evcil hayvan satışı", "Hayvanat bahçesi açmak"],
-        answer: "Sokak hayvanlarına barınak yapmak",
-        properAnswer: "Sokak hayvanlarına barınak yapmak, hayvanlarla ilgili sosyal sorumluluk projelerinden biridir.",
-        level: "kolay",
-        topic: "Haklar"
-    },
-    {
-        q: "Bir öğrencinin sosyal sorumluluk projesine katılması hangi değeri güçlendirir?",
-        options: ["Bencil davranışları", "Toplumsal dayanışmayı", "Tembelliği", "Rekabeti"],
-        answer: "Toplumsal dayanışmayı",
-        properAnswer: "Sosyal sorumluluk projelerine katılım, öğrencilerin toplumsal dayanışmasını güçlendirir.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Sosyal sorumluluk kulüplerinin üniversitelerdeki amacı nedir?",
-        options: ["Sadece eğlenmek", "Öğrencilerin topluma katkı sağlamasını teşvik etmek", "Spor yapmak", "Alışverişe gitmek"],
-        answer: "Öğrencilerin topluma katkı sağlamasını teşvik etmek",
-        properAnswer: "Sosyal sorumluluk kulüpleri, öğrencilerin topluma katkı sağlamasını teşvik eder.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
-        q: "Sosyal sorumluluk projelerinde en önemli kaynak nedir?",
-        options: ["Gönüllü katılım", "Rekabet", "Lüks harcamalar", "Reklam bütçesi"],
-        answer: "Gönüllü katılım",
-        properAnswer: "Gönüllü katılım, sosyal sorumluluk projelerinin en önemli kaynağıdır.",
-        level: "kolay",
-        topic: "Genel"
-    },
-    {
         q: "Çocuk işçiliğiyle mücadele eden bir sosyal sorumluluk projesi hangi temaya girer?",
-        options: ["İnsan hakları", "Çevre", "Hayvanlar", "Teknoloji"],
-        answer: "İnsan hakları",
-        properAnswer: "Çocuk işçiliğiyle mücadele eden projeler, insan hakları temalı sosyal sorumluluk projeleridir.",
-        level: "orta",
+        options: [
+            "Sürdürülebilir Kalkınma ve Yoksullukla Mücadele.",
+            "Evrensel İnsan Hakları ve Temel Yaşam Hakları.",
+            "Eğitim Eşitliği ve Fırsatlara Erişim.",
+            "Emeğin Korunması ve Çalışma Koşullarının İyileştirilmesi."
+        ],
+        answer: "Evrensel İnsan Hakları ve Temel Yaşam Hakları.",
+        properAnswer: "Çocuk işçiliği, çocukların eğitim, sağlık ve güvenlik gibi en temel insan haklarını ihlal eden bir sorundur. Bu nedenle, mücadele projeleri doğrudan evrensel insan hakları temasına odaklanır.",
+        level: "zor",
         topic: "Haklar"
     },
+    // burdan
     {
         q: "Bir şirketin sosyal sorumluluk projesi yapmasının en önemli nedeni nedir?",
-        options: ["Sadece marka reklamı yapmak", "Topluma değer katmak", "Rakipleri geçmek", "Vergi kaçırmak"],
-        answer: "Topluma değer katmak",
-        properAnswer: "Şirketler sosyal sorumluluk projeleriyle topluma değer katar.",
-        level: "orta",
+        options: [
+            "Şirketin itibarını ve marka sadakatini artırmak.",
+            "Sosyal ve çevresel sorunlara kalıcı çözümler üreterek uzun vadede sürdürülebilir bir etki yaratmak.",
+            "Hükümet ve sivil toplum kuruluşlarıyla daha güçlü ilişkiler kurmak.",
+            "Çalışanların motivasyonunu ve şirkete olan bağlılığını artırmak."
+        ],
+        answer: "Sosyal ve çevresel sorunlara kalıcı çözümler üreterek uzun vadede sürdürülebilir bir etki yaratmak.",
+        properAnswer: "Sosyal sorumluluk projeleri, sadece kısa vadeli faydalar değil, aynı zamanda toplumun ve çevrenin karşı karşıya olduğu sorunlara yönelik kalıcı ve sistemli çözümler üretmeyi amaçlar.",
+        level: "zor",
         topic: "Genel"
     },
     {
         q: "Kan bağışı kampanyaları toplumda neyi güçlendirir?",
-        options: ["Rekabeti", "Dayanışmayı", "Kar amacı", "Sadece bireysel faydayı"],
-        answer: "Dayanışmayı",
-        properAnswer: "Kan bağışı kampanyaları, toplumda dayanışmayı güçlendirir.",
-        level: "orta",
+        options: [
+            "Toplumsal sağlık bilincini ve kişisel sorumluluk duygusunu.",
+            "Bireyler arasında karşılıksız yardım ve dayanışma kültürünü.",
+            "Sağlık sisteminin acil durumlara hazırlıklı olma kapasitesini.",
+            "Toplumun riskli durumlara karşı direncini ve kriz yönetimi becerisini."
+        ],
+        answer: "Bireyler arasında karşılıksız yardım ve dayanışma kültürünü.",
+        properAnswer: "Kan bağışı kampanyaları, bireylerin birbirine herhangi bir karşılık beklemeden yardım etme eylemini teşvik ederek, toplumun temelindeki dayanışma ve yardımlaşma duygusunu güçlendirir.",
+        level: "zor",
         topic: "Sağlık"
     },
     {
         q: "Çevre temalı sosyal sorumluluk projelerinde en çok hangi konuya odaklanılır?",
-        options: ["Geri dönüşüm", "Lüks tüketim", "Moda", "Spor"],
-        answer: "Geri dönüşüm",
-        properAnswer: "Çevre temalı projelerde en çok geri dönüşüm konusuna odaklanılır.",
-        level: "orta",
+        options: [
+            "Atık yönetimi ve döngüsel ekonomiye geçiş.",
+            "Karbon ayak izinin azaltılması ve yenilenebilir enerji kaynaklarının kullanımı.",
+            "Ormanların ve su kaynaklarının korunması.",
+            "Tüketici bilincinin artırılması ve sürdürülebilir tüketim alışkanlıklarının teşvik edilmesi."
+        ],
+        answer: "Atık yönetimi ve döngüsel ekonomiye geçiş.",
+        properAnswer: "Çevre temalı projeler arasında en yaygın ve somut olanlar atık yönetimi ve geri dönüşüm faaliyetleridir. Bu projeler, toplumu daha verimli ve döngüsel bir ekonomiye geçiş konusunda bilinçlendirir.",
+        level: "zor",
         topic: "Çevre"
     },
     {
         q: "Engelli bireylerin topluma katılımını destekleyen sosyal sorumluluk projeleri hangi hakkı ön plana çıkarır?",
-        options: ["Eşitlik hakkı", "Mülkiyet hakkı", "Seyahat hakkı", "Oyun hakkı"],
-        answer: "Eşitlik hakkı",
-        properAnswer: "Engelli bireylerin topluma katılımını destekleyen projeler eşitlik hakkını ön plana çıkarır.",
-        level: "orta",
+        options: [
+            "Erişilebilirlik hakkı.",
+            "Yaşam kalitesini artırma hakkı.",
+            "Toplumsal yaşama tam ve eşit katılım hakkı.",
+            "Fırsat eşitliği ve ayrımcılık yasağı hakkı."
+        ],
+        answer: "Toplumsal yaşama tam ve eşit katılım hakkı.",
+        properAnswer: "Bu tür projeler, engelli bireylerin sadece fiziki mekanlara değil, aynı zamanda sosyal, kültürel ve ekonomik hayatın tüm alanlarına eşit koşullarda ve tam olarak dahil olmalarını sağlamayı hedefler. Bu, en kapsayıcı haktır.",
+        level: "zor",
         topic: "Haklar"
     },
     {
         q: "Sosyal sorumluluk projelerinin topluma kazandırdığı en büyük değer nedir?",
-        options: ["Bireysel kazanç", "Toplumsal bilinç", "Rekabet", "Moda"],
-        answer: "Toplumsal bilinç",
-        properAnswer: "Sosyal sorumluluk projeleri toplumsal bilinç kazandırır.",
-        level: "orta",
+        options: [
+            "Değişimi mümkün kılan bireysel ve kolektif sorumluluk duygusu.",
+            "Toplumun karşı karşıya olduğu sorunlara yönelik somut ve uygulanabilir çözümler üretme kapasitesi.",
+            "İnsanlar arasında empati ve dayanışma duygularının güçlenmesi.",
+            "Toplulukların kendi sorunlarını çözme ve kendi potansiyellerini keşfetme becerisinin artması."
+        ],
+        answer: "Değişimi mümkün kılan bireysel ve kolektif sorumluluk duygusu.",
+        properAnswer: "Sosyal sorumluluk projeleri, bireylere ve topluluklara, sorunların sadece başkalarına ait olmadığını, aksine kendilerinin de çözümün bir parçası olduğunu hissettirir. Bu sorumluluk bilinci, kalıcı değişimin temelini oluşturur.",
+        level: "zor",
         topic: "Genel"
     },
     {
-        q: "Hayvan haklarıyla ilgili bir sosyal sorumluluk projesi örneği hangisidir?",
-        options: ["Kısırlaştırma ve sahiplendirme kampanyaları", "Evcil hayvan satışı", "Hayvanat bahçesi reklamı", "Hayvan yarışmaları"],
-        answer: "Kısırlaştırma ve sahiplendirme kampanyaları",
-        properAnswer: "Hayvan haklarıyla ilgili projeler kısırlaştırma ve sahiplendirme kampanyalarını içerir.",
-        level: "orta",
-        topic: "Haklar"
+    q: "Hayvan refahı ve hakları üzerine yapılan bir sosyal sorumluluk projesinin en temel amacı aşağıdakilerden hangisidir?",
+    options: [
+        "Toplumda hayvanlara yönelik merhamet ve duyarlılığı artırarak, hayvanat bahçelerinin ve evcil hayvan ticarethanelerinin kapatılmasını sağlamak.",
+        "Sahipsiz hayvanların nüfusunu kontrol altına almak ve şehirlerdeki hayvan barınaklarına yerleştirilmelerini kolaylaştırmak.",
+        "Hayvanların acı çekmesini önlemek ve onlara insani yaşam koşulları sunan sistemler oluşturmak.",
+        "Hayvan hakları aktivistlerini desteklemek ve yasal hakları için kamuoyunda farkındalık oluşturmak."
+    ],
+    answer: "Hayvanların acı çekmesini önlemek ve onlara insani yaşam koşulları sunan sistemler oluşturmak.",
+    properAnswer: "Hayvan refahıyla ilgili sosyal sorumluluk projelerinin en temel amacı, hayvanların fiziksel ve ruhsal sağlığını güvence altına alarak acı çekmelerini önlemektir. Diğer seçenekler, bu temel amacı gerçekleştirmeye yönelik yöntemler veya daha spesifik alt hedefler olabilir.",
+    level: "zor",
+    topic: "Haklar"
     },
     {
         q: "Üniversitelerde yapılan sosyal sorumluluk projelerinin öğrenciler için en büyük faydası nedir?",
-        options: ["Sadece sosyal medya görünürlüğü", "Toplumsal duyarlılık ve liderlik becerisi kazanmak", "Maddi kazanç sağlamak", "Daha çok tatil yapmak"],
-        answer: "Toplumsal duyarlılık ve liderlik becerisi kazanmak",
+        options: ["Gelecekteki iş başvurularında öne çıkmalarını sağlayacak CV maddeleri oluşturmak.", "Etik karar verme süreçlerini deneyimleyerek mesleki hayata hazırlanmak.", "Teorik bilgiyi gerçek dünya problemleriyle ilişkilendirme yeteneğini geliştirmek.", "Toplumsal duyarlılığı yüksek bir birey olmanın yanı sıra, liderlik ve iletişim becerilerini de pratik olarak geliştirmek."],
+        answer: "Toplumsal duyarlılığı yüksek bir birey olmanın yanı sıra, liderlik ve iletişim becerilerini de pratik olarak geliştirmek.",
         properAnswer: "Üniversite sosyal sorumluluk projeleri, öğrencilere toplumsal duyarlılık ve liderlik becerisi kazandırır.",
-        level: "orta",
+        level: "çok zor",
         topic: "Genel"
     },
     {
@@ -446,14 +385,6 @@ const allQuestions = [
         topic: "Sağlık"
     },
     {
-        q: "Bir sosyal sorumluluk projesinin “etki analizi” neyi ölçer?",
-        options: ["Reklam gelirlerini", "Topluma sağlanan faydayı", "Projenin popülerliğini", "Harcanan bütçeyi"],
-        answer: "Topluma sağlanan faydayı",
-        properAnswer: "Etki analizi, sosyal sorumluluk projelerinin topluma sağladığı faydayı ölçer.",
-        level: "zor",
-        topic: "Genel"
-    },
-    {
         q: "Sosyal sorumluluk projelerinde “hesap verebilirlik” hangi değeri güçlendirir?",
         options: ["Güven", "Rekabet", "Popülerlik", "Gizlilik"],
         answer: "Güven",
@@ -471,7 +402,7 @@ const allQuestions = [
     },
     {
         q: "Sosyal sorumluluk çalışmalarında “yeşil yıkama (greenwashing)” kavramı neyi ifade eder?",
-        options: ["Şirketlerin çevreye gerçekten faydalı projeler yapması", "Şirketlerin çevreci görünüp aslında çevreye zarar vermeye devam etmesi", "Doğal kaynakları koruma projeleri", "Orman yangınlarını söndürme"],
+        options: ["Şirketlerin çevreye faydalı projeler yapması", "Şirketlerin çevreci görünüp aslında çevreye zarar vermeye devam etmesi", "Doğal kaynakları koruma projeleri", "Orman yangınlarını söndürme"],
         answer: "Şirketlerin çevreci görünüp aslında çevreye zarar vermeye devam etmesi",
         properAnswer: "Yeşil yıkama, şirketlerin çevreci görünüp aslında çevreye zarar vermeye devam etmesini ifade eder.",
         level: "zor",
@@ -486,11 +417,11 @@ function shuffle(array) {
 }
 
 function prepareQuestions() {
-    const easy = shuffle(allQuestions.filter(q => q.level === "kolay")).slice(0, 1);
-    const medium = shuffle(allQuestions.filter(q => q.level === "orta")).slice(0, 1);
-    const hard = shuffle(allQuestions.filter(q => q.level === "zor")).slice(0, 3);
-    return shuffle([...easy, ...medium, ...hard]);
+    const hard = shuffle(allQuestions.filter(q => q.level === "zor")).slice(0, 2);       // 2 zor
+    const veryHard = shuffle(allQuestions.filter(q => q.level === "çok zor")).slice(0, 3); // 3 çok zor
+    return shuffle([...hard, ...veryHard]);
 }
+
 
 function showQuestion() {
     updateProgress();
@@ -528,7 +459,7 @@ function handleAnswer(selected, btn, correct) {
             currentQuestionIndex++;
             lockOptions = false;
             showQuestion();
-        }, 200); // doğruysa hızlı geçiş
+        }, 2000); // doğruysa hızlı geçiş
     } else {
         btn.classList.add('wrong');
         userAnswers.push({ topic: q.topic, isCorrect: false });
