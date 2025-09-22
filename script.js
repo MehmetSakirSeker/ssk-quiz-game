@@ -512,9 +512,9 @@ function showProperAnswer(text) {
 
 function getPoint(index) {
     const q = questions[index];
-    if (q.level === "kolay") return 1;
-    if (q.level === "orta") return 2;
-    if (q.level === "zor") return 3;
+    if (q.level === "zor") return 2;
+    if (q.level === "çok zor") return 3;
+    if (q.level === "kolay") return 3;
 }
 
 function endGame() {
