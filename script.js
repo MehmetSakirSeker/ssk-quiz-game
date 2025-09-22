@@ -417,8 +417,8 @@ function shuffle(array) {
 }
 
 function prepareQuestions() {
-    const hard = shuffle(allQuestions.filter(q => q.level === "zor")).slice(0, 2);       // 2 zor
-    const veryHard = shuffle(allQuestions.filter(q => q.level === "çok zor")).slice(0, 3); // 3 çok zor
+    const hard = shuffle(allQuestions.filter(q => q.level === "zor")).slice(0, 4);       // 2 zor
+    const veryHard = shuffle(allQuestions.filter(q => q.level === "çok zor")).slice(0, 1); // 3 çok zor
     return shuffle([...hard, ...veryHard]);
 }
 
